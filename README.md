@@ -19,3 +19,11 @@ In this project, We build a system that utilises CH32V003 RISC-V processor and t
 | ------------- | ------------- |
 | Digital pin 18 (Orange wire) | PD4 |
 
+## Components required
+| Components| Quantity |
+| ------------- | ------------- |
+| VSDsquadron mini | 1 |
+| ESP 32  | 1 |
+| servo motor(SG90) | 1 |
+| Jumper wires | As per required |
+
