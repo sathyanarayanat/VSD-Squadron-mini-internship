@@ -1,5 +1,3 @@
-# VSD-Squadron-mini-internship
-
 # IOT HOME AUTOMATION USING BLYNK APP 
 
 ## PROJECT OVERVIEW
