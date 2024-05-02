@@ -27,3 +27,4 @@ In this project, We build a system that utilises CH32V003 RISC-V processor and t
 | servo motor(SG90) | 1 |
 | Jumper wires | As per required |
 
+## Demonstration video
