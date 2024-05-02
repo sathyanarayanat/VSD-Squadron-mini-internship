@@ -28,3 +28,4 @@ In this project, We build a system that utilises CH32V003 RISC-V processor and t
 | Jumper wires | As per required |
 
 ## Demonstration video
+[![Demonstration video](pinout_final.png)](https://drive.google.com/file/d/16y3WWIxM0j3iQrkFy_5D158Ioe6KJkg4/view?usp=sharing)
