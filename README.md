@@ -46,7 +46,7 @@ Injecting a fault into a microcontroller code can be done in several ways, depen
 
 since we work with a servo motor, its supposed to perform its action periodically when it receives the commans from input pin. To introduce a fault scenario where the servo motor behaves unexpectedly or inaccurately due to a random glitch.We can simulate this by randomly delaying the servo control pulses within a certain range, causing undesired behaviour behavior. To inject the fault using an ESP32 board, we can modify the code to receive commands from the ESP32 over serial communication to introduce the fault. Here's how we can do it.
 
-```c_cpp
+```cpp
 #define SERVO_PIN PD4
 #define INPUT_PIN PD2
 
@@ -115,4 +115,17 @@ void checkForFault() {
 }
 
 ```
- 
+```
+void setup() {
+  Serial.begin(9600); // Initialize serial communication
+}
+
+void loop() {
+  if (Serial.availableForWrite()) {
+    Serial.write('F'); // Send the fault injection command 'F' over serial
+    delay(1000); // Delay for 1 second before sending the next command
+  }
+}
+```
+
+When the ESP32 sends the 'F' command over serial, the CH32V003 board will introduce a random delay after each servo pulse, simulating a fault.
