@@ -115,7 +115,7 @@ void checkForFault() {
 }
 
 ```
-```
+```cpp
 void setup() {
   Serial.begin(9600); // Initialize serial communication
 }
