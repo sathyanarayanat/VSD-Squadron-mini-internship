@@ -129,3 +129,43 @@ void loop() {
 ```
 
 When the ESP32 sends the 'F' command over serial, the CH32V003 board will introduce a random delay after each servo pulse, simulating a fault.
+
+###Fault Injection Using Voltage Glitching
+
+Fault injection using voltage glitching is a technique employed in security research and hardware testing to induce transient faults in digital circuits. By momentarily disrupting the voltage supply to a target device, it's possible to cause unintended behavior such as incorrect instruction execution or memory corruption. we detail the process of performing fault injection using voltage glitching with an external board like the ESP32 to inject faults into a CH32V0003 microcontroller.
+
+
+*** Working ***
+ESP32 Configuration: We employ a custom code for the ESP32 to control the glitch injection process. This code toggles a GPIO pin at specific intervals to produce glitch pulses.
+Hardware Setup: The GPIO pin of the ESP32, responsible for generating glitch pulses, is connected to the circuit controlling the voltage supply to the CH32V0003 microcontroller. This circuit comprised a transistor-based switch controlled by the GPIO pin.
+Glitch Parameters: Various glitch parameters such as pulse duration, timing, and voltage level were adjusted to determine the optimal settings for inducing faults in the target device.
+
+
+- Triggering Glitch Pulses: The ESP32 code generated glitch pulses according to the configured parameters. These pulses momentarily disrupted the voltage supply to the CH32V0003 microcontroller during operation.
+Monitoring and Observation: Monitoring tools such as oscilloscopes and logic analyzers can be used to observe the effects of the voltage glitches on the target device. The behavior of the CH32V0003 microcontroller during glitch injection should be monitored to identify any unexpected behavior or vulnerabilities.
+
+'''cpp
+// Define the GPIO pin used for glitch injection
+#define GLITCH_PIN 2
+// Define the interval between glitch pulses in milliseconds
+#define GLITCH_INTERVAL 5000 // 5 seconds
+
+void setup() {
+  pinMode(GLITCH_PIN, OUTPUT); // Set the glitch pin as output
+  Serial.begin(9600); // Initialize serial communication
+}
+
+void loop() {
+  // Trigger glitch injection periodically
+  triggerGlitch();
+  delay(GLITCH_INTERVAL);
+}
+
+void triggerGlitch() {
+  // Generate glitch pulses by toggling the glitch pin
+  digitalWrite(GLITCH_PIN, HIGH);
+  delayMicroseconds(10); // Adjust the duration of the glitch pulse as needed
+  digitalWrite(GLITCH_PIN, LOW);
+}
+'''
+This code configures an ESP32 board to generate glitch signals periodically at a specified interval, defined by GLITCH_INTERVAL (set to 5 seconds in this example). The glitch injection process is initiated automatically in the loop() function without the need for external commands. When executed, the ESP32 toggles a GPIO pin (GLITCH_PIN) to generate glitch pulses, which can be connected to a circuit controlling the voltage supply to the CH32V0003 microcontroller.
