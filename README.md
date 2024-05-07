@@ -130,12 +130,12 @@ void loop() {
 
 When the ESP32 sends the 'F' command over serial, the CH32V003 board will introduce a random delay after each servo pulse, simulating a fault.
 
-###Fault Injection Using Voltage Glitching
+### Fault Injection Using Voltage Glitching
 
 Fault injection using voltage glitching is a technique employed in security research and hardware testing to induce transient faults in digital circuits. By momentarily disrupting the voltage supply to a target device, it's possible to cause unintended behavior such as incorrect instruction execution or memory corruption. we detail the process of performing fault injection using voltage glitching with an external board like the ESP32 to inject faults into a CH32V0003 microcontroller.
 
 
-*** Working ***
+** Working **
 ESP32 Configuration: We employ a custom code for the ESP32 to control the glitch injection process. This code toggles a GPIO pin at specific intervals to produce glitch pulses.
 Hardware Setup: The GPIO pin of the ESP32, responsible for generating glitch pulses, is connected to the circuit controlling the voltage supply to the CH32V0003 microcontroller. This circuit comprised a transistor-based switch controlled by the GPIO pin.
 Glitch Parameters: Various glitch parameters such as pulse duration, timing, and voltage level were adjusted to determine the optimal settings for inducing faults in the target device.
