@@ -35,9 +35,12 @@ In this project, We build a system that utilises CH32V003 RISC-V processor and t
 Injecting a fault into a microcontroller code can be done in several ways, depending on what kind of fault you want to simulate. Here are a few possibilities:
 
 -Voltage Glitching: This involves momentarily lowering the voltage supply to the microcontroller, which can cause it to execute instructions incorrectly or behave unpredictably.
+
 -Clock Glitching: Similar to voltage glitching, this involves momentarily disrupting the clock signal to the microcontroller, causing it to execute instructions incorrectly.
 -Memory Corruption: Writing data to random memory locations can simulate faults caused by cosmic rays or other forms of radiation.
+
 -Instruction Corruption: Modifying the program instructions in memory can cause the microcontroller to execute unintended instructions.
+
 -Peripheral Fault Injection: Intentionally sending incorrect data to peripherals, such as sensors or communication modules, can simulate faults in external components.
 
 
