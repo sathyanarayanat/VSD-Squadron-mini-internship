@@ -30,7 +30,7 @@ In this project, We build a system that utilises CH32V003 RISC-V processor and t
 ## Demonstration video
 [![Demonstration video](images/thumbnail.png)](https://drive.google.com/file/d/16y3WWIxM0j3iQrkFy_5D158Ioe6KJkg4/view?usp=sharing)
 
-## fault injection
+## Fault injection
 
 Injecting a fault into a microcontroller code can be done in several ways, depending on what kind of fault you want to simulate. Here are a few possibilities:
 
@@ -50,3 +50,23 @@ since we work with a servo motor, its supposed to perform its action periodicall
 
 Fault injection using voltage glitching is a technique employed in security research and hardware testing to induce transient faults in digital circuits. By momentarily disrupting the voltage supply to a target device, it's possible to cause unintended behavior such as incorrect instruction execution or memory corruption. we detail the process of performing fault injection using voltage glitching with an external board like the ESP32 to inject faults into a CH32V0003 microcontroller.
 
+### Fault Injection Using Laser
+
+  Fault injection using lasers is an advanced technique employed in the field of hardware security and reliability testing. It involves using focused laser beams to induce faults in integrated circuits (ICs) by altering their internal operations. This method is highly precise and can target specific areas of the chip to observe how faults affect the device's behavior.
+
+  The core principle behind laser fault injection is to use a laser to introduce transient or permanent faults in a semiconductor device. The energy from the laser can create localized heating, ionization, or even physical damage to the silicon and its structures. The result is a disturbance in the normal operation of transistors and other circuit elements.
+
+**Equipment and Setup**
+- Laser Source: A high-precision laser capable of delivering controlled pulses. The wavelength is typically in the infrared range (e.g., 1064 nm), as silicon is more transparent at these wavelengths, allowing deeper penetration.
+- Optical System: Lenses and mirrors to focus the laser beam onto the desired location on the chip.
+- Microscope: High-resolution microscope to accurately position the laser spot on the chip.
+- Positioning System: Precision stages to move the chip under the laser for targeting specific areas.
+Control and Measurement Systems: Equipment to control the laser parameters (e.g., intensity, duration) and to measure the chip's response to the faults.
+
+**Process**
+- Preparation: The chip is prepared by decapping it, which involves removing the package to expose the silicon die.
+- Targeting: The chip is placed under the microscope and the laser is focused on the area of interest.
+- Injection: The laser is pulsed to inject faults. Parameters such as pulse duration, intensity, and repetition rate are carefully controlled.
+- Observation: The chip's response to the laser-induced faults is monitored using electrical probes or other diagnostic tools.
+
+Refer to this [video](https://youtu.be/s3f1zNpzINY?si=C5WTHMIiiGA5-gdB).
