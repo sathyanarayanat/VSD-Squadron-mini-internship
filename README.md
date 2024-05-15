@@ -70,3 +70,6 @@ Control and Measurement Systems: Equipment to control the laser parameters (e.g.
 - Observation: The chip's response to the laser-induced faults is monitored using electrical probes or other diagnostic tools.
 
 Refer to this [video](https://youtu.be/s3f1zNpzINY?si=C5WTHMIiiGA5-gdB).
+
+## Fault injection Demonstration video
+[![Demonstration video](images/thumbnail.png)](https://drive.google.com/file/d/1dOb5_a83ecV0x1f26khtWrTsDfPmlnsG/view?usp=sharing)
