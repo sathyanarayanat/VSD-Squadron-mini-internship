@@ -50,6 +50,8 @@
 
   Fault injection using voltage glitching is a technique employed in security research and hardware testing to induce transient faults in digital circuits. By momentarily disrupting the voltage supply to a target device, it's possible to cause unintended behavior such as incorrect instruction execution or memory corruption. we detail the process of performing fault injection using voltage glitching with an external board like the ESP32 to inject faults into a CH32V0003 microcontroller.
 
+Refer to this [video](https://youtu.be/6Pf3pY3GxBM?si=8_gXfaGqCDoyM0Yh)
+
 ### Fault Injection Using Laser
 
   Fault injection using lasers is an advanced technique employed in the field of hardware security and reliability testing. It involves using focused laser beams to induce faults in integrated circuits (ICs) by altering their internal operations. This method is highly precise and can target specific areas of the chip to observe how faults affect the device's behavior.
