@@ -1,7 +1,7 @@
 # HOME AUTOMATION USING ARDUINO IOT CLOUD 
 
 ## PROJECT OVERVIEW
-In this project, We build a system that utilises CH32V003 RISC-V processor and the Arduino IOT cloud to convert traditional home appliances into IoT-enabled devices. The system incorporates the ESP32 for its built-in Wi-Fi and Bluetooth capabilities. When the user sends an ON/OFF command through the Arduino IOT cloud app/web appplication, the signal is transmitted to the ESP32 via Wi-Fi, which then activates a GPIO port in the VSDsquardron mini. This signal controls a servo motor connected to the VSDsquadron mini, allowing for remote operation of the home appliances.  By integrating the Arduino IOT cloud with the CH32V003 RISC-V processor and ESP32, users can conveniently manage their appliances from anywhere using a smartphone or tablet. This enhances user convenience, improves energy efficiency by enabling remote power management, and adds a layer of automation to household tasks. Additionally, the use of IoT technology increases the versatility and functionality of conventional home appliances, aligning them with modern smart home standards.
+  In this project, We build a system that utilises CH32V003 RISC-V processor and the Arduino IOT cloud to convert traditional home appliances into IoT-enabled devices. The system incorporates the ESP32 for its built-in Wi-Fi and Bluetooth capabilities. When the user sends an ON/OFF command through the Arduino IOT cloud app/web appplication, the signal is transmitted to the ESP32 via Wi-Fi, which then activates a GPIO port in the VSDsquardron mini. This signal controls a servo motor connected to the VSDsquadron mini, allowing for remote operation of the home appliances.  By integrating the Arduino IOT cloud with the CH32V003 RISC-V processor and ESP32, users can conveniently manage their appliances from anywhere using a smartphone or tablet. This enhances user convenience, improves energy efficiency by enabling remote power management, and adds a layer of automation to household tasks. Additionally, the use of IoT technology increases the versatility and functionality of conventional home appliances, aligning them with modern smart home standards.
 
 ## PINOUT DIAGRAM
 ![pinout_final](https://github.com/sathyanarayanat/VSD-Squadron-mini-internship/assets/71438522/7affb808-8237-4dcd-a462-842e7524d752)
@@ -32,7 +32,7 @@ In this project, We build a system that utilises CH32V003 RISC-V processor and t
 
 ## Fault injection
 
-Injecting a fault into a microcontroller code can be done in several ways, depending on what kind of fault you want to simulate. Here are a few possibilities:
+  Injecting a fault into a microcontroller code can be done in several ways, depending on what kind of fault you want to simulate. Here are a few possibilities:
 
 - Voltage Glitching: This involves momentarily lowering the voltage supply to the microcontroller, which can cause it to execute instructions incorrectly or behave unpredictably.
 
@@ -44,11 +44,11 @@ Injecting a fault into a microcontroller code can be done in several ways, depen
 - Peripheral Fault Injection: Intentionally sending incorrect data to peripherals, such as sensors or communication modules, can simulate faults in external components.
 
 
-since we work with a servo motor, its supposed to perform its action periodically when it receives the commands from input pin. To introduce a fault scenario where the servo motor behaves unexpectedly or inaccurately due to a random glitch. We can simulate this by randomly delaying the servo control pulses within a certain range, causing undesired behaviour behavior. To inject the fault using an ESP32 board, we can modify the code to receive commands from the ESP32 over serial communication to introduce the fault. Here's how we can do it.
+  since we work with a servo motor, its supposed to perform its action periodically when it receives the commands from input pin. To introduce a fault scenario where the servo motor behaves unexpectedly or inaccurately due to a random glitch. We can simulate this by randomly delaying the servo control pulses within a certain range, causing undesired behaviour behavior. To inject the fault using an ESP32 board, we can modify the code to receive commands from the ESP32 over serial communication to introduce the fault. Here's how we can do it.
 
 ### Fault Injection Using Voltage Glitching
 
-Fault injection using voltage glitching is a technique employed in security research and hardware testing to induce transient faults in digital circuits. By momentarily disrupting the voltage supply to a target device, it's possible to cause unintended behavior such as incorrect instruction execution or memory corruption. we detail the process of performing fault injection using voltage glitching with an external board like the ESP32 to inject faults into a CH32V0003 microcontroller.
+  Fault injection using voltage glitching is a technique employed in security research and hardware testing to induce transient faults in digital circuits. By momentarily disrupting the voltage supply to a target device, it's possible to cause unintended behavior such as incorrect instruction execution or memory corruption. we detail the process of performing fault injection using voltage glitching with an external board like the ESP32 to inject faults into a CH32V0003 microcontroller.
 
 ### Fault Injection Using Laser
 
@@ -73,3 +73,6 @@ Refer to this [video](https://youtu.be/s3f1zNpzINY?si=C5WTHMIiiGA5-gdB).
 
 ## Fault injection Demonstration video
 [![Demonstration video](images/thumbnail.png)](https://drive.google.com/file/d/1ZjqXWocuHVGDlQ5_R-jQ433Gl6RUpgx6/view?usp=sharing)
+
+### Mitigating fault injection
+  For this particular fault injection technique, we can avoid it by making sure than the servo connection is not exposed so that it can be exploited for this purpose.
