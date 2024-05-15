@@ -28,7 +28,7 @@ In this project, We build a system that utilises CH32V003 RISC-V processor and t
 | Jumper wires | As per required |
 
 ## Demonstration video
-[![Demonstration video](images/thumbnail.png)](https://drive.google.com/file/d/16y3WWIxM0j3iQrkFy_5D158Ioe6KJkg4/view?usp=sharing)
+[![Demonstration video](images/demo_photo.jpg)](https://drive.google.com/file/d/16y3WWIxM0j3iQrkFy_5D158Ioe6KJkg4/view?usp=sharing)
 
 ## Fault injection
 
