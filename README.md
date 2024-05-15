@@ -75,4 +75,4 @@ Refer to this [video](https://youtu.be/s3f1zNpzINY?si=C5WTHMIiiGA5-gdB).
 [![Demonstration video](images/thumbnail.png)](https://drive.google.com/file/d/1ZjqXWocuHVGDlQ5_R-jQ433Gl6RUpgx6/view?usp=sharing)
 
 ### Mitigating fault injection
-  For this particular fault injection technique, we can avoid it by making sure than the servo connection is not exposed so that it can be exploited for this purpose.
+  For this particular fault injection technique, we can avoid it by making sure that the servo connection is not exposed so that it can be exploited for this purpose.
